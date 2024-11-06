@@ -81,4 +81,3 @@ val my37: Long = 123456789123456789L
 val my38: Float = 6.626f
 val my39: Double = 0.007
 val my40: String = "Android Studio"
-
