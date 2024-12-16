@@ -30,11 +30,11 @@ fun main() {
     println(getConvertTemp(305.0, "C") ?: "Не верная шкала")
     println(getConvertTemp(120.0, "D") ?: "Не верная шкала")
 
-    println("7. Одежда по погоде")
+    println("7. Одежда по погоде -30, 18")
     println(getClothes(-38.0))
     println(getClothes(18.0))
 
-    println("8. Фильм по возрасту")
+    println("8. Фильм по возрасту -40, 18")
     println(getFilm(-40))
     println(getFilm(18))
 }
