@@ -26,9 +26,10 @@ fun main() {
 //    которая составляет 0,5% от его стоимости. В случае, если стоимость не указана, то берётся стандартная стоимость в $50
 //    Задача: Рассчитать полную стоимость доставки.
 
-    var cost: Double? = 1500.0
+    var cost: Double = 1500.0
+    var cosrDost: Double? = 100.0
     var koefInsur: Double = 0.005
-    var price = (1 + koefInsur) * (cost ?: 50)
+    var price = (1 + koefInsur) * (cosrDost ?: 50.0) + cost
 
     println(price)
 
