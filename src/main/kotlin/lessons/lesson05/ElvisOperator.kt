@@ -15,7 +15,7 @@ fun main() {
 
     var defVol = 1200.0
     var koef: Double? = 1.0
-    var curVol = defVol * koef ?: 0.5
+    var curVol = defVol * (koef ?: 0.5)
 
     println(curVol)
 
@@ -26,9 +26,9 @@ fun main() {
 //    которая составляет 0,5% от его стоимости. В случае, если стоимость не указана, то берётся стандартная стоимость в $50
 //    Задача: Рассчитать полную стоимость доставки.
 
-    var cost: Double? = 1500.00
-    var koefInsur: = 0.005
-    var price = cost ?: 50 * (1 + koefInsur)
+    var cost: Double? = 1500.0
+    var koefInsur: Double = 0.005
+    var price = (1 + koefInsur) * (cost ?: 50)
 
     println(price)
 
@@ -38,7 +38,7 @@ fun main() {
 //    атмосферное давление, которое должно быть зафиксировано. Лаборант приносит вам набор показателей,
 //    но по пути может что-нибудь потерять. Задача - сообщить об ошибке в случае отсутствия показаний атмосферного давления.
 
-    var press: Array<Int?> = arrayOf(742, 761, null, 758)
+    var press: Array<String?> = arrayOf("742", "761", null, "758")
     for (tek in press) {
         println(tek ?: "Значение не найдено")
     }
