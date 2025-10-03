@@ -7,6 +7,7 @@ fun main() {
     var fnd: String
     var res: String
     var mas: List<String>
+    var kol: Int
 
 //    Если фраза содержит слово "невозможно":
 //    Преобразование: Замените "невозможно" на "совершенно точно возможно, просто требует времени".
@@ -63,13 +64,13 @@ fun main() {
     // Извлечение даты из строки лога
     per = "Пользователь вошел в систему -> 2021-12-01 09:48:23"
     mas = per.split(" ")
-    var kol = mas.size
+    kol = mas.size
     println(mas[kol-2])
     println(mas[kol-1])
 
     // Маскирование личных данных
     per = "4539 1488 0343 6467"
-    var res = ""
+    res = ""
     kol = per.length
     if (kol > 4) {
         res = "*".repeat(kol-4)
