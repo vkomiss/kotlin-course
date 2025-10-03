@@ -67,22 +67,22 @@ fun main() {
     println(mas[kol-2])
     println(mas[kol-1])
 
-//    // Маскирование личных данных
-//    per = "4539 1488 0343 6467"
-//    var res = ""
-//    kol = per.length
-//    if (kol > 4) {
-//        res = "*".repeat(kol-4)
-//        res += per.substring(kol-1, 4)
-//        per = res
-//    }
-//    println(per)
+    // Маскирование личных данных
+    per = "4539 1488 0343 6467"
+    var res = ""
+    kol = per.length
+    if (kol > 4) {
+        res = "*".repeat(kol-4)
+        res += per.substring(kol-1, 4)
+        per = res
+    }
+    println(per)
 
-//    // Форматирование адреса электронной почты
-//    per = "username@example.com"
-//    per = per.replace("@", "[at]")
-//    per = per.replace(".", "[dot]")
-//    println(per)
+    // Форматирование адреса электронной почты
+    per = "username@example.com"
+    per = per.replace("@", "[at]")
+    per = per.replace(".", "[dot]")
+    println(per)
 
     // Извлечение имени файла из пути
     per = "D:/Dropbox/KMV-KVA/report.txt"
@@ -98,16 +98,15 @@ fun main() {
     }
     println(res)
 
+
     // Все слова с большой буквы
     per = "Kotlin is the best programming language"
-    mas = per.split(" ")
+    var mas = per.split(" ")
     res = ""
     for (ch in 1..mas.size) {
         res += mas[ch-1][0].uppercase() + mas[ch-1].substring(1) + " "
     }
     println(res)
-
-    // Игра в разведчика
 
 
     // Таблица умножения
