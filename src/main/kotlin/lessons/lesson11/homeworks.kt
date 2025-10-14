@@ -3,19 +3,23 @@ package lessons.lesson11
 fun main() {
 
     // 1 Не принимает аргументов и не возвращает значения.
-    fun f1() { }
+    fun f1() {}
 
 
     // 2 Принимает два целых числа и возвращает их сумму.
-    fun f2(a2: Int, b2: Int): Int = a2 + b2
+    fun f2(a2: Int, b2: Int): {
+        return a2 + b2
+    }
 
 
     // 3 Принимает строку и ничего не возвращает.
-    fun f3(s3: String) { }
+    fun f3(s3: String) {}
 
 
     // 4 Принимает список целых чисел и возвращает среднее значение типа Double.
-    fun f4(l4: List<Int>): Double = l4.average()
+    fun f4(l4: List<Int>): Double {
+        // рассчитать среднее
+    }
 
 
     // 5 Принимает nullable строку и возвращает её длину в виде nullable целого числа и доступна только в текущем файле.
@@ -27,7 +31,7 @@ fun main() {
 
 
     // 7 Принимает nullable список целых чисел, не возвращает значения и доступна только в текущем файле.
-    private fun f7(l7: List<Int>?) { }
+    private fun f7(l7: List<Int>?) {}
 
 
     // 8 Принимает целое число и возвращает nullable строку.
@@ -53,26 +57,36 @@ fun main() {
 
     // 11 Напишите функцию multiplyByTwo, которая принимает целое число и возвращает его,
     // умноженное на 2.
-    fun multiplyByTwo(n11: Int): Int = n11 * 2
+    fun multiplyByTwo(n11: Int): Int {
+        return n11 * 2
+    }
 
 
     // 12 Создайте функцию isEven, которая принимает целое число и возвращает true,
     // если число чётное, и false в противном случае.
-    fun isEven(n12: Int): Boolean = n12 % 2 == 0
+    fun isEven(n12: Int): Boolean {
+        return n12 % 2 == 0
+    }
 
 
     // 13 Напишите функцию printNumbersUntil, которая принимает целое число n и выводит на экран числа от 1 до n.
     // Если число n меньше 1, функция должна прекратить выполнение с помощью return без вывода сообщений.
     fun printNumbersUntil(n13: Int) {
-        if (n13 < 1) return
-        for (i13 in 1..n13) println(i13)
+        if (n13 < 1) {
+            return
+        }
+        for (i13 in 1..n13) {
+            println(i13)
+        }
     }
 
 
     // 14 Создайте функцию findFirstNegative, которая принимает список целых чисел и возвращает первое отрицательное число в списке.
     // Если отрицательных чисел нет, функция должна вернуть null.
     fun findFirstNegative(l14: List<Int>): Int? {
-        for (n14 in l14) if (n14 < 0) return n14
+        for (n14 in l14) if (n14 < 0) {
+            return n14
+        }
         return null
     }
 
@@ -82,7 +96,9 @@ fun main() {
     // Если встречается null значение, функция должна прекратить выполнение с помощью return без возврата значения.
     fun processList(l15: List<String?>) {
         for (s15 in l15) {
-            if (s15 == null) return
+            if (s15 == null) {
+                return
+            }
             println(s15)
         }
     }
