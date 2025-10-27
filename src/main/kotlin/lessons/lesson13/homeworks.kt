@@ -176,7 +176,7 @@ fun task17() {
 fun task18() {
 
     val otchet = mapOf("t1" to "passed", "t2" to "skipped", "t3" to "failed")
-    val bezProp = otchet.filter { (_, v) -> v != "skipped" }
+    val bezProp = otchet.filterNot { it.value == "skipped" }
     println("18) Результат: $bezProp")
 
 }
